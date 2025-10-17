@@ -134,6 +134,9 @@ def process_request(data):
 
     print(f"✅ Finished round {round_num} for {task_id}")
 
+@app.get("/")
+def home():
+    return {"message": "Server is running successfully!", "status": "ok"}
 
 # === Main endpoint ===
 @app.post("/api-endpoint")
